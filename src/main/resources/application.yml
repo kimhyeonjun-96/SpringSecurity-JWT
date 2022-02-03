@@ -1,0 +1,30 @@
+server:
+  port: 8181
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/security?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+
+#  mvc:
+#    view:
+#      prefix: /templates/
+#      suffix: .mustache
+#  없어도 된다
+#  왜냐하면 의존성에 등록이 되어 있기 때문
+
+  jpa:
+    hibernate:
+      ddl-auto: create #create update none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
