@@ -8,10 +8,10 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-@Configuration
-@EnableWebSecurity // 활성화, 스프링시큐리티 필터가 스프링 필터체인에 등록
+//@Configuration
+//@EnableWebSecurity // 활성화, 스프링시큐리티 필터가 스프링 필터체인에 등록
 // 스프링시큐리티 필터는 현재 클래스를 말 한다!
-@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+//@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 // secured 어노테이션 활성화 어노테이션
 // prePostEnabled = true preAuthorize, postAuthorize 어노테이션들을 활성화 한다
 public class SecurityConfig extends WebSecurityConfigurerAdapter {

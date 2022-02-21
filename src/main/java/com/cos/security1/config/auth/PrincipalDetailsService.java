@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 *      .usernameParameter("username") 으로 변경을 해야한다!
 * */
 
-@Service
+//@Service
 public class PrincipalDetailsService implements UserDetailsService {
 
     @Autowired

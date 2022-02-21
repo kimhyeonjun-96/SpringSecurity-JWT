@@ -18,8 +18,8 @@ public class IndexController {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+//    @Autowired
+//    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @GetMapping({"","/"})
     public  String index(){
@@ -81,8 +81,8 @@ public class IndexController {
         * 이유는 패스워드가 암호화가 되지 않았기 때문!
         * */
         String rawPassword = user.getPassword();
-        String encPassword = bCryptPasswordEncoder.encode(rawPassword);
-        user.setPassword(encPassword);
+//        String encPassword = bCryptPasswordEncoder.encode(rawPassword);
+//        user.setPassword(encPassword);
         userRepository.save(user);
 
         // redirect를 붙이면 /loginForm 함수를 호출한다!
