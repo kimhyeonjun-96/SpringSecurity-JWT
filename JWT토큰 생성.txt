@@ -1,0 +1,29 @@
+방금 만든 JWT토큰
+Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjb3Mg7Yag7YGwIiwiaWQiOjEsImV4cCI6MTY0NjY0ODcyOSwidXNlcm5hbWUiOiJ0ZXN0In0.T1IeU4vcHxXO-sYxELHHdK9mhD936psWk0feitUvRDi_8lPPvrNXhLaxwIl5SoYKHntk4gUL_3JyH5jXr4vntg
+
+이것을 통해 처리해야하는 필터가 필요하다!
+중요한 정보 민감한 정보
+=======================================================================================
+<보통의 시큐리티 체크>
+
+유저네임, 패스워드 로그인
+정상
+서버
+	세션ID생성
+클라이언트
+	쿠키로 세션ID를 응갑
+	
+요청마다 쿠키값 세션ID를 항상 들고 서버쪽으로 요청마다
+서버는 세션ID가 유효한지 판단( security에서 알아서 해준다 )해서 유효하면 인증이 필요한 페이지로 접근하도록 한다
+	session.getAttribute("세션값 확인");
+
+=======================================================================================
+<지금 내가 하고 있는 JWT 체크>
+
+유저네임, 패스워드 로그인
+정상
+JWT토큰을 생성
+클라이언트 쪽으로 JWT토큰을 응답
+
+요청할 때마다 JWT토큰을 가지고 요청마다
+서버는 JWT토큰이 유효한지를 판단 하는 필텨가 필요하다!

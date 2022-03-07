@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-//@Configuration // IOC 등록을 위한 어노테이션
+@Configuration // IOC 등록을 위한 어노테이션
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override

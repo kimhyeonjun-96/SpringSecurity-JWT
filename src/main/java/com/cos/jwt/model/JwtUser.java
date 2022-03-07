@@ -14,14 +14,14 @@ import java.util.List;
 public class JwtUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long jwt_id;
-    private String jwt_username;
-    private  String jwt_password;
-    private  String jwt_roles;
+    private long jwtId;
+    private String jwtUsername;
+    private String jwtPassword;
+    private String jwtRoles;
     // roles USER, ADMIN과 같이 role이 여러개일 경우 아래와 같은 메서드 생성
     public List<String> getRoleList(){
-        if(this.jwt_roles.length() > 0){
-            return Arrays.asList(this.jwt_roles.split(","));
+        if(this.jwtRoles.length() > 0){
+            return Arrays.asList(this.jwtRoles.split(","));
         }
         return new ArrayList<>();
     }
